@@ -1,8 +1,6 @@
 import { combineReducers } from "redux";
-import Newest from './Newest';
-import News from './News';
+import Blogs from './Blogs';
 
 export default combineReducers({
-    Newest,
-    News
+    Blogs
 });

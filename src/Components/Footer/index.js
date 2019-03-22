@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import * as actions from '../../Actions/index';
 import './index.css';
 
-class News extends Component {
+class Blog extends Component {
   constructor(props){
-    super(props)
+      super(props)
   }
   componentDidMount() {
     let propsParam = this.props,
@@ -12,14 +12,13 @@ class News extends Component {
     actions.getData(path,propsParam);
   }
   render() {
-    return (
+    return ( 
        <div>
-           <p className="App-intro">
-                To get started, edit <code>News/index.js</code> and save to reload.
-            </p>
-       </div>    
+        <p className="App-intro">
+          To get started, edit <code>Blogs/index.js</code> and save to reload.
+        </p>
+       </div>   
     );
   }
 }
-
-export default News;
+export default Blog;
