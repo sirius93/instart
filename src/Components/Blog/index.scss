@@ -1,0 +1,70 @@
+@import '../../Utils/variables.scss';
+
+.blog-card {
+    width: 360px;
+    height: 500px;
+    margin: 40px 15px;
+    background-color: $white;
+    @media only screen and (max-width : 991px) {
+        width: 300px;
+        height: 450px;
+    }
+}
+.image-container{
+    width: 360px;
+    height: 250px;
+    overflow: hidden;
+    @media only screen and (max-width : 991px) {
+        width: 300px;
+        height: 225px;
+    }
+}
+.blog-title{
+    font-size: 1.25em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-family: Open Sans;
+    padding: 0 35px
+}
+.blog-body-container{
+    padding: 0 35px;
+    max-height: 250px;
+    // white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .blog-body{
+        font-size: 1em;
+        color: gray;
+        text-align: center;
+    }
+}
+
+.link-container{
+    margin-top: 70px;
+    a.read-more-btn {
+        font-family: Open Sans;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        border: 1px solid $lightgray;
+        padding: 5px 15px;
+    }
+}
+@mixin icon-style {
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    position: relative;  
+}
+i.fa.fa-image.icon-image {
+    @include icon-style();
+    top: -15px;
+}
+i.fa.fa-pencil.edit-icon {
+    @include icon-style();
+    top: -10px;
+}

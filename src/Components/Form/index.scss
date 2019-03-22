@@ -1,0 +1,49 @@
+@import '../../Utils/variables.scss';
+
+.Forms-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    max-height: 4em;
+    margin: 30px 0 70px 0;
+    text-align: center;
+    font-family: Source Sans Pro;
+    .form-container{
+        height: 100px;
+        background: #eee;
+        form {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 25px;
+            label.signup-message {
+                text-align: center;
+                width: 115px;
+                padding-top: 5px;
+                font-family: Source Sans Pro;
+                font-size: 1em;
+                text-transform: uppercase;
+                color: black;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+        input[type="submit"] {
+            width: 283px;
+            height: 45px;
+            background: black;
+            color: white;
+            border: 1px black;
+            text-transform: uppercase;
+        }
+        input[type="text"], input[type="email"] {
+            margin-right: 25px;
+            height: 45px;
+            width: 445px;
+        }
+        input::placeholder {
+            padding-left: 35px;
+            text-transform: uppercase;
+            font-size: 15px;
+          }
+    }
+}

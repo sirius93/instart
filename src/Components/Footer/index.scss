@@ -1,0 +1,40 @@
+@import '../../Utils/variables.scss';
+
+.footer-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    max-height: 4em;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1);
+    margin: auto;
+    background-color: $invert-background;
+    text-align: center;
+    ul.link-container {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 0;
+        margin: 0;
+    
+        li{
+            font-size: .75em;
+            padding: .5em;
+            a{
+                text-decoration: none;
+                color: gray;
+                text-transform: uppercase;
+            }
+            // &:hover{
+            //     background-color: $lightgray;
+            // }
+        }
+        li.click-icons{
+            text-align: center;
+
+            &:not(:last-child){
+                box-shadow: 1px 0px 0px 0px gray;
+            }
+            
+        }
+    }
+
+}

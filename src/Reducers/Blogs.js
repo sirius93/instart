@@ -3,7 +3,7 @@ const Blogs = (state = [], action) => {
       case "FETCH_BLOGS_DATA_SUCCESS":
         return {
           ...state,
-          data: action.payload,
+          data: action.payload.slice(0,8),
           status: true,
           message: ""
         };

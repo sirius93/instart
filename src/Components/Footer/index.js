@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-import * as actions from '../../Actions/index';
 import './index.css';
 
-class Blog extends Component {
-  constructor(props){
-      super(props)
-  }
-  componentDidMount() {
-    let propsParam = this.props,
-        path = this.props.params.location.pathname;
-    actions.getData(path,propsParam);
-  }
+class Footer extends Component {
   render() {
     return ( 
-       <div>
-        <p className="App-intro">
-          To get started, edit <code>Blogs/index.js</code> and save to reload.
-        </p>
-       </div>   
+       <footer className="footer-container">
+         <div className="container">
+          <ul className="link-container">
+            <li className="click-icons"><a href="#">Copyrights All right reserved</a></li>
+            <li className="click-icons"><a href="#">Terms policy</a></li>
+            <li className="click-icons"><a href="#">Disclaimers</a></li>
+          </ul> 
+         </div>
+       </footer> 
     );
   }
 }
-export default Blog;
+export default Footer;

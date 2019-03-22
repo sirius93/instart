@@ -6,19 +6,42 @@ class Blog extends Component {
   constructor(props){
       super(props)
   }
-  componentDidMount() {
-    let propsParam = this.props,
-        path = this.props.params.location.pathname;
-    actions.getData(path,propsParam);
-  }
-  render() {
-    return ( 
-       <div>
-        <p className="App-intro">
-          To get started, edit <code>Blogs/index.js</code> and save to reload.
-        </p>
-       </div>   
-    );
-  }
+
+render() {
+let imgSrc = this.props.image ? this.props.image : '';
+let TemplatewithImg = imgSrc ?  <div>
+                                    <div className="image-container"> 
+                                        <img className="blog-image" src={imgSrc}></img>  
+                                    </div>
+                                    <i class="fa fa-image icon-image"></i>
+                                    <div className="title-container">
+                                        <h6 className="blog-title">{this.props.title}</h6>
+                                    </div> 
+                                    <div className="link-container">
+                                        <a href="" className="read-more-btn">Read more</a>
+                                    </div>
+                                    
+                                </div> 
+                                : 
+                                <div>
+                                    <i class="fa fa-pencil edit-icon"></i>
+                                    <div className="title-container">
+                                        <h6 className="blog-title">{this.props.title}</h6>
+                                    </div> 
+                                    
+                                    <div className="blog-body-container">
+                                        <p className="blog-body">{this.props.body}</p>
+                                    </div>
+                                    <div className="link-container">
+                                        <a href="" className="read-more-btn">Read more</a>
+                                    </div>
+                                </div>
+
+return ( 
+    <div className="blog-card">
+        {TemplatewithImg}  
+    </div>   
+);
+}
 }
 export default Blog;

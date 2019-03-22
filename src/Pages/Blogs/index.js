@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as actions from '../../Actions/index';
 import './index.css';
+import Blog from '../../Components/Blog'
 
 class Blogs extends Component {
   constructor(props){
@@ -11,12 +12,18 @@ class Blogs extends Component {
     actions.getData(propsParam);
   }
   render() {
+    let BlogData = this.props ? this.props.Blogs.data : '';
+    const RenderBlogs = BlogData? BlogData.map((blog,key) =>
+          <Blog params={this.props} {...blog}/>
+        ):''
     return ( 
-       <div>
-        <p className="App-intro">
-          To get started, edit <code>Blogs/index.js</code> and save to reload.
-        </p>
-       </div>   
+       <div className="blogs-container">
+
+          <div className="blogs">
+            {RenderBlogs}
+          </div>
+
+       </div>  
     );
   }
 }

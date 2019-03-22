@@ -1,0 +1,69 @@
+@import '../../Utils/variables.scss';
+
+.Nav-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    max-height: 4em;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1);
+    margin: auto;
+    background-color: $invert-background;
+    text-align: center;
+
+    ul.Navbar {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 0;
+        margin: 0;
+        &.left{
+            float: left;
+            li{
+                width: 50px;
+                text-align: center;
+                margin-right: 0;
+            }
+            box-shadow: -1px 0px 0px 0px $lightgray, 1px 0px 0px 0px $lightgray;
+        }
+        &.right{
+            float: right;
+        }
+        &.center {
+            margin-left: 200px;
+            @media only screen and (max-width: 767px) {
+                margin-left: -50px;
+            }
+        } 
+        li{
+            font-size: 1em;
+            margin-right: 1em;
+            padding: 1em 5px;
+            a{
+                text-decoration: none;
+                color: $primary-background;
+            }
+            &:hover{
+                background-color: $lightgray;
+            }   
+        }
+        li.click-icons{
+            margin-left: auto;
+            margin-right: auto;
+            width: 50px;
+            text-align: center;
+            box-shadow: 1px 0px 0px 0px $lightgray;
+            &:hover{
+                background-color: $lightgray;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            li.click-icons{
+                display: none
+            }
+        }
+        @media only screen and (max-width: 991px) {
+            ul.Navbar{
+                margin-left: 0px;
+            }
+        }
+      }
+}
