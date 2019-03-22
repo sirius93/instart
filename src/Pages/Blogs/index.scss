@@ -1,3 +1,4 @@
+@import '../../Utils/variables.scss';
 .blogs-container{
     width: 100vw;
     display: flex;
@@ -5,7 +6,6 @@
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
     margin: auto;
     text-align: center;
-    background-color: $lightgray;
 }
 .blogs{
     display: flex;
