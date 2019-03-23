@@ -32,35 +32,27 @@ class Form extends Component {
     this.setState({
       message : "Form has been successfully submitted. Thank you."
     })
-    setTimeout(
-      ()=> {
-        this.setState({
-          message : '',
-          name : '',
-          email: ''
-          }
-        )
-      }, 5000)
   }
 
   render() {
+    const formTemplate = this.state.message ? <h3 className="message">{this.state.message}</h3> 
+                                            : <form onSubmit={this.handleSubmit}>
+                                                <label className="signup-message">
+                                                  Sign up for newsletter
+                                                </label>
+                                                <label>
+                                                  <input type="text" value={this.state.value} onChange={this.handleNameChange}  placeholder="Your Name" required/>
+                                                </label>
+                                                <label>
+                                                  <input type="email" value={this.state.value} onChange={this.handleEmailChange}  placeholder="Your Email Address" required/>
+                                                </label>
+                                                <input type="submit" value="Subscribe now" />
+                                              </form>
     return ( 
       <div className="Forms-container">
         <div className="container">
-          <div className="form-container">
-            <form onSubmit={this.handleSubmit}>
-              <label className="signup-message">
-                Sign up for newsletter
-              </label>
-              <label>
-                <input type="text" value={this.state.value} onChange={this.handleNameChange}  placeholder="Your Name" required/>
-              </label>
-              <label>
-                <input type="email" value={this.state.value} onChange={this.handleEmailChange}  placeholder="Your Email Address" required/>
-              </label>
-              <input type="submit" value="Subscribe now" />
-            </form>
-            {this.state.message}
+          <div className="form-container">        
+            {formTemplate}
           </div>
         </div>
       </div>
