@@ -9,6 +9,7 @@
     margin: auto;
     background-color: $invert-background;
     text-align: center;
+    font-family: Source Sans Pro;
 
     ul.Navbar {
         list-style: none;
@@ -29,6 +30,8 @@
         }
         &.center {
             margin-left: 200px;
+            font-weight: 600;
+            letter-spacing: 2px;
             @media only screen and (max-width: 767px) {
                 margin-left: -50px;
             }
